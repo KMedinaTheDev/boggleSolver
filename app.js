@@ -32,7 +32,7 @@ let isSquare = function(n) {
 function solve() {
   const boggleStr = document.getElementById("boggleBoard").value;
   // dictionary : http://api.codebox.org.uk/boggle/<letters>
-  var dictionaryUrl = "http://api.codebox.org.uk/boggle/" + boggleStr;
+  var dictionaryUrl = "https://api.codebox.org.uk/boggle/" + boggleStr;
 
   $.ajax({
     url: dictionaryUrl,
