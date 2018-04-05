@@ -1,4 +1,4 @@
-![(-\:/-)Boggle Solver(-\:/-)](bogglesolver1.2png)
+![(-\:/-)Boggle Solver(-\:/-)](bogglesolver.png)
 
 ## Boggle Solver
 
