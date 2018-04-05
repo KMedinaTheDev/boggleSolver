@@ -3,8 +3,12 @@
 document.getElementById("checkDictionary").addEventListener("click", solve)
 
 // check if a square #
-let isSquare = function(n) {
-  return n > 0 && Math.sqrt(n) % 1 === 0;
+let isSquare = function(n, bounds) {
+
+  return n >= bounds && Math.sqrt(n) % 1 === 0;
+
+
+
 };
 // Different approach to solution, did not use it for this app.
 // this approach would accept any size board
@@ -40,6 +44,10 @@ function solve() {
       for (let r = 0; r < response.length; r++) {
         let sortedList = sortByLength(response);
         let word = (response[r]);
+        // hide the empty state
+        $(".empty-state").addClass('hidden');
+        // show list
+        $('.results').removeClass('hidden');
 
         let wordList = document.getElementById("wordSearchResults");
         let li = document.createElement("li");
@@ -68,7 +76,7 @@ function solve() {
   }
 
   // ===============================================================
-  if (isSquare(boggleStr.length)) {
+  if (isSquare(boggleStr.length, 16)) {
     // makeGrid(boggleStr);
     // attempt to traverse grid and map letter
     // findWord();
@@ -78,6 +86,6 @@ function solve() {
 
   } else {
 
-    alert("Incorrect Entry- not a Square!")
+    alert("Incorrect Entry- please enter 16 letters!")
   }
 }

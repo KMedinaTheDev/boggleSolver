@@ -6,20 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Boggle Assistant</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Boggle Solver</h1>
+  <main>
+  <aside class="boggleTools">
+      <h1>Boggle Solver</h1>
+    <p>Instructions: Enter all 16 letters on your Boggle Board & hit submit for a list off all possible words.</p>
+    <input type="text" name="" placeholder="Enter Boggle Board Letters Here" id="boggleBoard">
+    <input type="button" name="checkDictionary" id="checkDictionary" value="Submit">
+    <footer>Created By: <a href="https://github.com/KMedinaTheDev">KMedinaTheDev</a> </footer>
 
-  <span>Instructions: Enter all 16 letters on your Boggle Board & hit submit for a list off all possible words.</span>
-  <input type="text" name="" placeholder="Enter Boggle Board Letters Her" id="boggleBoard">
-  <input type="button" name="checkDictionary" id="checkDictionary" value="Submit">
-  <h2>List will appear Below:</h2>
-  <ol id="wordSearchResults">
+  </aside>
+  <section>
+    <h2 class="empty-state">Nothing Searched Yet.</h2>
+    <h2 class="hidden results">Words Found:</h2>
 
-  </ol>
+    <ol id="wordSearchResults">
 
-  <footer>Creater By: KMedinaTheDev</footer>
+    </ol>
+  </section>
+</main>
   <script src="app.js" type="text/javascript" charset="utf-8" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
